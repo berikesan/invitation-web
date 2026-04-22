@@ -5,14 +5,18 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import couple1 from "@/public/couple.png";
+import couple2 from "@/public/couple-2.png";
+import couple3 from "@/public/couple-3.png";
+import gallery1 from "@/public/gallery-1.png";
 
 const photos = [
-  { src: "/couple.png", alt: "Couple 1" },
-  { src: "/couple-2.png", alt: "Couple 2" },
-  { src: "/couple-3.png", alt: "Couple 3" },
-  { src: "/gallery-1.png", alt: "Gallery Decoration" },
-  { src: "/couple.png", alt: "Couple Close-up" },
-  { src: "/couple-2.png", alt: "Couple Standing" },
+  { src: couple1, alt: "Couple 1" },
+  { src: couple2, alt: "Couple 2" },
+  { src: couple3, alt: "Couple 3" },
+  { src: gallery1, alt: "Gallery Decoration" },
+  { src: couple1, alt: "Couple Close-up" },
+  { src: couple2, alt: "Couple Standing" },
 ];
 
 function GallerySlider() {
@@ -50,7 +54,7 @@ function GallerySlider() {
            }}
            drag="x"
            dragConstraints={{ left: -3000, right: 0 }}
-           onDragEnd={(e, { offset, velocity }) => {
+           onDragEnd={(_, { offset }) => {
               if (offset.x < -100) next();
               else if (offset.x > 100) prev();
            }}
@@ -61,7 +65,7 @@ function GallerySlider() {
                key={i} 
                className="min-w-full md:min-w-[calc(50%-4px)] h-full relative rounded-lg overflow-hidden grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
              >
-                <Image src={photo.src} alt={photo.alt} fill className="object-cover" priority={i < 3} />
+                <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" priority={i < 3} />
              </div>
            ))}
         </motion.div>
@@ -113,11 +117,12 @@ export function GallerySection() {
               transition={{ delay: index * 0.1 }}
               className="aspect-square relative rounded-lg overflow-hidden shadow-lg border border-stone-100 group"
             >
-              <Image 
-                 src={photo.src} 
-                 alt={photo.alt} 
-                 fill 
-                 className="object-cover transition-transform duration-700 group-hover:scale-110" 
+              <Image
+                 src={photo.src}
+                 alt={photo.alt}
+                 fill
+                 sizes="(max-width: 768px) 50vw, 33vw"
+                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
             </motion.div>

@@ -2,9 +2,8 @@
 
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { MailOpen } from "lucide-react";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import coupleImg from "@/public/couple.png";
 
 interface CoverProps {
   onOpen: () => void;
@@ -46,11 +45,12 @@ export default function Cover({ onOpen, isOpened }: CoverProps) {
                   boxShadow: "inset 0 0 40px rgba(0,0,0,0.1)"
                 }}
               >
-                <Image 
-                  src="/couple.png" 
-                  alt="Dewax & Chika" 
-                  fill 
-                  className="object-cover scale-110" 
+                <Image
+                  src={coupleImg}
+                  alt="Dewax & Chika"
+                  fill
+                  sizes="(max-width: 768px) 256px, 320px"
+                  className="object-cover scale-110"
                   priority
                 />
               </div>

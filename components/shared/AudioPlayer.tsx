@@ -35,5 +35,5 @@ export default function AudioPlayer({ isOpened, isPlaying, setIsPlaying }: Audio
     }
   }, [isOpened, setIsPlaying]);
 
-  return <audio ref={audioRef} src="/music.mp3" loop />;
+  return <audio ref={audioRef} src="/invitation/music.mp3" loop />;
 }

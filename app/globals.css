@@ -1,27 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
-  --font-accent: "Great Vibes", cursive;
-  
-  --color-bali-gold: #FFD700;
-  --color-deep-crimson: #8B0000;
-  --color-kamboja-white: #FDFDFD;
-  
+
+  /* Shared animation tokens */
   --animate-mesh: mesh 10s ease infinite;
   --animate-fade-up: fade-up 0.8s ease-out forwards;
-  
+
   @keyframes mesh {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
-  
+
   @keyframes fade-up {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+  /* Template design tokens — overridden per template via template.css */
+  --font-serif: "Georgia", serif;
+  --font-accent: "cursive";
+  --color-bali-gold: #FFD700;
+  --color-deep-crimson: #8B0000;
+  --color-kamboja-white: #FDFDFD;
 }
 
 :root {
@@ -42,16 +44,4 @@ h1, h2, h3, .font-serif {
 
 .font-accent {
   font-family: var(--font-accent);
-}
-
-.bali-gradient {
-  background: linear-gradient(-45deg, #8B0000, #5E0000, #FFD700, #DAA520);
-  background-size: 400% 400%;
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }

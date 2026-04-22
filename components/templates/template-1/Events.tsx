@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MapPin, Calendar, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import coupleImg from "@/public/couple.png";
 
 const events = [
   {
@@ -79,11 +80,12 @@ export default function EventsSection() {
       <div className="relative min-h-[90vh] flex items-center justify-center py-32 overflow-hidden">
          {/* Backdrop Couple Image with Soft Fades */}
          <div className="absolute inset-0 z-0">
-            <Image 
-              src="/couple.png" 
-              alt="Background Couple" 
-              fill 
-              className="object-cover desaturate-[0.3] opacity-50" 
+            <Image
+              src={coupleImg}
+              alt="Background Couple"
+              fill
+              sizes="100vw"
+              className="object-cover desaturate-[0.3] opacity-50"
             />
             {/* Soft Fades for premium transitions */}
             <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-stone-50 to-transparent z-10" />

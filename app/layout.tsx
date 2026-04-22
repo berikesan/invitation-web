@@ -13,17 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Wedding of Dewax & Chika",
-  description: "Om Swastiastu. Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Dewax & Chika. 4 April 2026.",
-  icons: {
-    icon: "/couple.png",
-  },
-  openGraph: {
-    title: "The Wedding of Dewax & Chika",
-    description: "Undangan Pernikahan Dewax & Chika • 4 April 2026 • Buleleng, Bali.",
-    images: [{ url: "/couple.png" }],
-    type: "website",
-  },
+  title: "Berikesan — Invitation Templates",
+  description: "Digital wedding invitation templates by berikesan.com",
 };
 
 export default function RootLayout({

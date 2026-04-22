@@ -2,19 +2,20 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import coupleImg from "@/public/couple.png";
 
 const couple = {
   groom: {
     name: "Dewax",
     fullName: "I Gusti Ngurah Dewantara",
     parents: "Putra dari Bapak I Wayan Sugita & Ibu Ni Ketut Rahayu",
-    image: "/couple.png",
+    image: coupleImg,
   },
   bride: {
     name: "Chika",
     fullName: "Ni Luh Putu Chika Amara",
     parents: "Putri dari Bapak I Gusti Ngurah Agung & Ibu Ni Nyoman Sari",
-    image: "/couple.png",
+    image: coupleImg,
   }
 };
 
@@ -37,7 +38,7 @@ export default function CoupleSection() {
             className="text-center md:flex-1"
           >
             <div className="relative w-48 h-64 md:w-64 md:h-80 mx-auto mb-6 rounded-t-full border-4 border-bali-gold overflow-hidden shadow-xl">
-              <Image src={couple.groom.image} alt={couple.groom.name} fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+              <Image src={couple.groom.image} alt={couple.groom.name} fill sizes="(max-width: 768px) 192px, 256px" className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
             </div>
             <h2 className="text-3xl md:text-5xl font-accent text-deep-crimson mb-2">{couple.groom.name}</h2>
             <p className="text-sm md:text-lg font-semibold text-stone-800 mb-4">{couple.groom.fullName}</p>
@@ -60,7 +61,7 @@ export default function CoupleSection() {
             className="text-center md:flex-1"
           >
             <div className="relative w-48 h-64 md:w-64 md:h-80 mx-auto mb-6 rounded-t-full border-4 border-bali-gold overflow-hidden shadow-xl">
-              <Image src={couple.bride.image} alt={couple.bride.name} fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+              <Image src={couple.bride.image} alt={couple.bride.name} fill sizes="(max-width: 768px) 192px, 256px" className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
             </div>
             <h2 className="text-3xl md:text-5xl font-accent text-deep-crimson mb-2">{couple.bride.name}</h2>
             <p className="text-sm md:text-lg font-semibold text-stone-800 mb-4">{couple.bride.fullName}</p>
