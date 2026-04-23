@@ -2,7 +2,11 @@ import Link from "next/link";
 
 export default function HomePage() {
   const templates = [
-    { id: "template-1", name: "Template 1", description: "Elegant Balinese wedding style" },
+    { id: "template-1", name: "Template 1", description: "Balinese Cultural" },
+    { id: "template-2", name: "Template 2", description: "Modern Minimal" },
+    { id: "template-3", name: "Template 3", description: "Rustic Garden" },
+    { id: "template-4", name: "Template 4", description: "Elegant Floral" },
+    { id: "template-5", name: "Template 5", description: "Dark Luxe" },
   ];
 
   return (

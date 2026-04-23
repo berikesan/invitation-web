@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Philosopher:ital,wght@0,400;1,400&display=swap");
+
+:root {
+  --font-serif: "Cinzel", serif;
+  --font-accent: "Philosopher", serif;
+  --color-midnight: #0D0D1A;
+  --color-gold: #D4AF37;
+  --color-platinum: #E5E4E2;
+  --color-sapphire: #1B2A6B;
+  --color-surface: #1A1A2E;
+}
+
+.luxe-gradient {
+  background: linear-gradient(-45deg, #0D0D1A, #1B2A6B, #D4AF37, #0D0D1A);
+  background-size: 400% 400%;
+  animation: var(--animate-mesh);
+}
+
+.glass-card {
+  background: rgba(26, 26, 46, 0.88);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(212, 175, 55, 0.08);
+}

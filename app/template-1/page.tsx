@@ -6,7 +6,7 @@ import Cover from "@/components/templates/template-1/Cover";
 import CoupleSection from "@/components/templates/template-1/Couple";
 import EventsSection from "@/components/templates/template-1/Events";
 import { GallerySection, RSVPSection } from "@/components/templates/template-1/BottomSections";
-import BottomNav from "@/components/shared/BottomNav";
+import BottomNav from "@/components/templates/template-1/BottomNav";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";

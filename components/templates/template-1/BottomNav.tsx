@@ -23,7 +23,7 @@ export default function BottomNav({ isPlaying, onToggleMusic }: BottomNavProps) 
     { icon: <Users className="w-5 h-5 md:w-6 md:h-6" />, label: "Mempelai", href: "#couple" },
     { icon: <Calendar className="w-5 h-5 md:w-6 md:h-6" />, label: "Acara", href: "#events" },
     { icon: <ImageIcon className="w-5 h-5 md:w-6 md:h-6" />, label: "Galeri", href: "#gallery" },
-    { 
+    {
       icon: (
         <motion.div
           animate={isPlaying ? { rotate: 360 } : { rotate: 0 }}
@@ -31,8 +31,8 @@ export default function BottomNav({ isPlaying, onToggleMusic }: BottomNavProps) 
         >
           <Music2 className="w-5 h-5 md:w-6 md:h-6" />
         </motion.div>
-      ), 
-      label: "Musik", 
+      ),
+      label: "Musik",
       onClick: (e: React.MouseEvent) => {
         e.preventDefault();
         onToggleMusic();
@@ -41,7 +41,7 @@ export default function BottomNav({ isPlaying, onToggleMusic }: BottomNavProps) 
   ];
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-lg"
@@ -67,7 +67,7 @@ export default function BottomNav({ isPlaying, onToggleMusic }: BottomNavProps) 
                   {isPlaying && (
                     <motion.div
                       layoutId="music-indicator"
-                      className="absolute -top-1 -right-1 w-2 h-2 bg-bali-gold rounded-full"
+                      className="absolute -top-1 -right-1 w-2 h-2 bg-[#FFD700] rounded-full"
                     />
                   )}
                 </button>

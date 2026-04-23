@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Alex+Brush&display=swap");
+
+:root {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-accent: "Alex Brush", cursive;
+  --color-primary: #1A1A1A;
+  --color-secondary: #C8A96E;
+  --color-accent: #E8D5B7;
+  --color-bg: #F9F7F4;
+}
+
+.minimal-gradient {
+  background: linear-gradient(135deg, #F9F7F4 0%, #E8D5B7 50%, #F9F7F4 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(200, 169, 110, 0.2);
+  box-shadow: 0 4px 24px rgba(26, 26, 26, 0.06);
+}
