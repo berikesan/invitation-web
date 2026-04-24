@@ -15,6 +15,36 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Berikesan — Invitation Templates",
   description: "Digital wedding invitation templates by berikesan.com",
+  openGraph: {
+    title: "Berikesan — Invitation Templates",
+    description: "Digital wedding invitation templates by berikesan.com",
+    url: "https://berikesan.com/invitation",
+    siteName: "Berikesan",
+    images: [
+      {
+        url: "https://berikesan.com/invitation/logo-opengraph.png",
+        width: 1000,
+        height: 1000,
+        alt: "Berikesan",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Berikesan — Invitation Templates",
+    description: "Digital wedding invitation templates by berikesan.com",
+    images: ["https://berikesan.com/invitation/logo-opengraph.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+    other: [{ rel: "manifest", url: "/site.webmanifest" }],
+  },
 };
 
 export default function RootLayout({
